@@ -19,13 +19,32 @@ body {
 .pictureword {
 	font-size: 14px;
 }
-#Layer1 {
+#fly {
 	position:absolute;
 	width:63px;
 	height:76px;
-	z-index:3;
+	z-index:5;
 	left: 74px;
 	top: 31px;
+}
+#parent {
+	position:absolute;
+	width:246px;
+	height:181px;
+	z-index:4;
+	left: 664px;
+	top: 105px;
+	background-color: #CCCCCC;
+	overflow: hidden;
+}
+#son {
+	position:absolute;
+	width:231px;
+	height:163px;
+	z-index:4;
+	left: 7px;
+	top: -226px;
+	overflow: visible;
 }
 -->
 </style>
@@ -101,38 +120,124 @@ function MM_initTimelines() { //v4.0
     var ns5 = (ns && parseInt(navigator.appVersion) > 4);
     var macIE5 = (navigator.platform ? (navigator.platform == "MacPPC") : false) && (navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4);
     document.MM_Time = new Array(1);
-    document.MM_Time[0] = new Array(2);
+    document.MM_Time[0] = new Array(5);
     document.MM_Time["Timeline1"] = document.MM_Time[0];
     document.MM_Time[0].MM_Name = "Timeline1";
     document.MM_Time[0].fps = 15;
     document.MM_Time[0][0] = new String("sprite");
     document.MM_Time[0][0].slot = 1;
     if (ns4)
-        document.MM_Time[0][0].obj = document["Layer1"];
+        document.MM_Time[0][0].obj = document["fly"];
     else if (ns5)
-        document.MM_Time[0][0].obj = document.getElementById("Layer1");
+        document.MM_Time[0][0].obj = document.getElementById("fly");
     else
-        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
-    document.MM_Time[0][0].keyFrames = new Array(1, 13, 24, 33, 45);
+        document.MM_Time[0][0].obj = document.all ? document.all["fly"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 17, 32, 44, 60);
     document.MM_Time[0][0].values = new Array(2);
     if (ns5 || macIE5)
-        document.MM_Time[0][0].values[0] = new Array("74px", "153px", "231px", "309px", "388px", "466px", "545px", "621px", "695px", "766px", "835px", "901px", "962px", "999px", "1013px", "1013px", "1006px", "994px", "978px", "959px", "935px", "906px", "870px", "827px", "750px", "670px", "588px", "504px", "419px", "339px", "263px", "192px", "127px", "150px", "189px", "227px", "262px", "296px", "329px", "361px", "394px", "426px", "458px", "491px", "523px");
+        document.MM_Time[0][0].values[0] = new Array("74px", "133px", "192px", "251px", "309px", "368px", "427px", "486px", "545px", "602px", "659px", "713px", "766px", "818px", "869px", "917px", "962px", "992px", "1008px", "1014px", "1014px", "1009px", "1001px", "992px", "980px", "967px", "951px", "933px", "912px", "888px", "860px", "827px", "770px", "711px", "650px", "588px", "525px", "462px", "399px", "339px", "282px", "227px", "175px", "127px", "140px", "169px", "198px", "227px", "254px", "280px", "305px", "329px", "353px", "377px", "402px", "426px", "450px", "475px", "499px", "523px");
     else
-        document.MM_Time[0][0].values[0] = new Array(74,153,231,309,388,466,545,621,695,766,835,901,962,999,1013,1013,1006,994,978,959,935,906,870,827,750,670,588,504,419,339,263,192,127,150,189,227,262,296,329,361,394,426,458,491,523);
+        document.MM_Time[0][0].values[0] = new Array(74,133,192,251,309,368,427,486,545,602,659,713,766,818,869,917,962,992,1008,1014,1014,1009,1001,992,980,967,951,933,912,888,860,827,770,711,650,588,525,462,399,339,282,227,175,127,140,169,198,227,254,280,305,329,353,377,402,426,450,475,499,523);
     document.MM_Time[0][0].values[0].prop = "left";
     if (ns5 || macIE5)
-        document.MM_Time[0][0].values[1] = new Array("31px", "26px", "19px", "12px", "5px", "-1px", "-7px", "-11px", "-14px", "-14px", "-12px", "-5px", "14px", "55px", "106px", "156px", "203px", "246px", "287px", "327px", "366px", "404px", "437px", "462px", "472px", "467px", "454px", "437px", "417px", "395px", "372px", "347px", "317px", "291px", "280px", "273px", "266px", "261px", "256px", "251px", "246px", "242px", "237px", "233px", "227px");
+        document.MM_Time[0][0].values[1] = new Array("31px", "28px", "23px", "18px", "12px", "7px", "2px", "-3px", "-7px", "-10px", "-13px", "-14px", "-14px", "-13px", "-9px", "-2px", "14px", "42px", "78px", "116px", "153px", "188px", "221px", "252px", "282px", "311px", "340px", "369px", "396px", "422px", "445px", "462px", "471px", "470px", "464px", "454px", "442px", "427px", "412px", "395px", "377px", "359px", "340px", "317px", "295px", "285px", "278px", "273px", "268px", "263px", "259px", "256px", "252px", "249px", "245px", "242px", "239px", "235px", "231px", "227px");
     else
-        document.MM_Time[0][0].values[1] = new Array(31,26,19,12,5,-1,-7,-11,-14,-14,-12,-5,14,55,106,156,203,246,287,327,366,404,437,462,472,467,454,437,417,395,372,347,317,291,280,273,266,261,256,251,246,242,237,233,227);
+        document.MM_Time[0][0].values[1] = new Array(31,28,23,18,12,7,2,-3,-7,-10,-13,-14,-14,-13,-9,-2,14,42,78,116,153,188,221,252,282,311,340,369,396,422,445,462,471,470,464,454,442,427,412,395,377,359,340,317,295,285,278,273,268,263,259,256,252,249,245,242,239,235,231,227);
     document.MM_Time[0][0].values[1].prop = "top";
     if (!ns4) {
         document.MM_Time[0][0].values[0].prop2 = "style";
         document.MM_Time[0][0].values[1].prop2 = "style";
     }
-    document.MM_Time[0][1] = new String("behavior");
-    document.MM_Time[0][1].frame = 41;
-    document.MM_Time[0][1].value = "MM_timelineGoto('Timeline1','1')";
-    document.MM_Time[0].lastFrame = 45;
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns4)
+        document.MM_Time[0][1].obj = document["parent"] ? document["parent"].document["son"] : document["son"];
+    else if (ns5)
+        document.MM_Time[0][1].obj = document.getElementById("son");
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["son"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 60);
+    document.MM_Time[0][1].values = new Array(3);
+    if (ns5 || macIE5)
+        document.MM_Time[0][1].values[0] = new Array("8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px");
+    else
+        document.MM_Time[0][1].values[0] = new Array(8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8);
+    document.MM_Time[0][1].values[0].prop = "left";
+    if (ns5 || macIE5)
+        document.MM_Time[0][1].values[1] = new Array("178px", "172px", "166px", "161px", "155px", "149px", "143px", "138px", "132px", "126px", "120px", "115px", "109px", "103px", "97px", "92px", "86px", "80px", "74px", "69px", "63px", "57px", "51px", "45px", "40px", "34px", "28px", "22px", "17px", "11px", "5px", "-1px", "-6px", "-12px", "-18px", "-24px", "-29px", "-35px", "-41px", "-47px", "-53px", "-58px", "-64px", "-70px", "-76px", "-81px", "-87px", "-93px", "-99px", "-104px", "-110px", "-116px", "-122px", "-127px", "-133px", "-139px", "-145px", "-150px", "-156px", "-162px");
+    else
+        document.MM_Time[0][1].values[1] = new Array(178,172,166,161,155,149,143,138,132,126,120,115,109,103,97,92,86,80,74,69,63,57,51,45,40,34,28,22,17,11,5,-1,-6,-12,-18,-24,-29,-35,-41,-47,-53,-58,-64,-70,-76,-81,-87,-93,-99,-104,-110,-116,-122,-127,-133,-139,-145,-150,-156,-162);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    if (ns5 || macIE5)
+        document.MM_Time[0][1].values[2] = new Array("163px", "163px", "163px", "163px", "163px", "164px", "164px", "164px", "164px", "164px", "165px", "165px", "165px", "165px", "165px", "166px", "166px", "166px", "166px", "166px", "167px", "167px", "167px", "167px", "167px", "168px", "168px", "168px", "168px", "168px", "169px", "169px", "169px", "169px", "169px", "170px", "170px", "170px", "170px", "170px", "171px", "171px", "171px", "171px", "171px", "172px", "172px", "172px", "172px", "172px", "173px", "173px", "173px", "173px", "173px", "174px", "174px", "174px", "174px", "175px");
+    else
+        document.MM_Time[0][1].values[2] = new Array(163,163,163,163,163,164,164,164,164,164,165,165,165,165,165,166,166,166,166,166,167,167,167,167,167,168,168,168,168,168,169,169,169,169,169,170,170,170,170,170,171,171,171,171,171,172,172,172,172,172,173,173,173,173,173,174,174,174,174,175);
+    document.MM_Time[0][1].values[2].prop = "height";
+    if (!ns4)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0][2] = new String("behavior");
+    document.MM_Time[0][2].frame = 61;
+    document.MM_Time[0][2].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0][3] = new String("sprite");
+    document.MM_Time[0][3].slot = 1;
+    if (ns4)
+        document.MM_Time[0][3].obj = document["fly"];
+    else if (ns5)
+        document.MM_Time[0][3].obj = document.getElementById("fly");
+    else
+        document.MM_Time[0][3].obj = document.all ? document.all["fly"] : null;
+    document.MM_Time[0][3].keyFrames = new Array(61, 72);
+    document.MM_Time[0][3].values = new Array(2);
+    if (ns5 || macIE5)
+        document.MM_Time[0][3].values[0] = new Array("133px", "133px", "133px", "133px", "133px", "133px", "133px", "133px", "133px", "133px", "133px", "133px");
+    else
+        document.MM_Time[0][3].values[0] = new Array(133,133,133,133,133,133,133,133,133,133,133,133);
+    document.MM_Time[0][3].values[0].prop = "left";
+    if (ns5 || macIE5)
+        document.MM_Time[0][3].values[1] = new Array("28px", "28px", "28px", "28px", "28px", "28px", "28px", "28px", "28px", "28px", "28px", "28px");
+    else
+        document.MM_Time[0][3].values[1] = new Array(28,28,28,28,28,28,28,28,28,28,28,28);
+    document.MM_Time[0][3].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][3].values[0].prop2 = "style";
+        document.MM_Time[0][3].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][4] = new String("sprite");
+    document.MM_Time[0][4].slot = 2;
+    if (ns4)
+        document.MM_Time[0][4].obj = document["parent"] ? document["parent"].document["son"] : document["son"];
+    else if (ns5)
+        document.MM_Time[0][4].obj = document.getElementById("son");
+    else
+        document.MM_Time[0][4].obj = document.all ? document.all["son"] : null;
+    document.MM_Time[0][4].keyFrames = new Array(61, 72);
+    document.MM_Time[0][4].values = new Array(3);
+    if (ns5 || macIE5)
+        document.MM_Time[0][4].values[0] = new Array("8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px", "8px");
+    else
+        document.MM_Time[0][4].values[0] = new Array(8,8,8,8,8,8,8,8,8,8,8,8);
+    document.MM_Time[0][4].values[0].prop = "left";
+    if (ns5 || macIE5)
+        document.MM_Time[0][4].values[1] = new Array("-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px", "-162px");
+    else
+        document.MM_Time[0][4].values[1] = new Array(-162,-162,-162,-162,-162,-162,-162,-162,-162,-162,-162,-162);
+    document.MM_Time[0][4].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][4].values[0].prop2 = "style";
+        document.MM_Time[0][4].values[1].prop2 = "style";
+    }
+    if (ns5 || macIE5)
+        document.MM_Time[0][4].values[2] = new Array("175px", "175px", "175px", "175px", "175px", "175px", "175px", "175px", "175px", "175px", "175px", "175px");
+    else
+        document.MM_Time[0][4].values[2] = new Array(175,175,175,175,175,175,175,175,175,175,175,175);
+    document.MM_Time[0][4].values[2].prop = "height";
+    if (!ns4)
+        document.MM_Time[0][4].values[2].prop2 = "style";
+    document.MM_Time[0].lastFrame = 72;
     for (i=0; i<document.MM_Time.length; i++) {
         document.MM_Time[i].ID = null;
         document.MM_Time[i].curFrame = 0;
@@ -156,7 +261,8 @@ function showPicture(filename) {
 </script>
 
 <body style="text-align: left" onload="MM_timelinePlay('Timeline1')">
-<div id="Layer1" style="left: 74px; top: 31px;"><img src="images/dragon.gif" name="Image1" width="64" height="77" /></div>
+<div id="fly" style="left: 74px; top: 31px;"><img src="images/dragon.gif" name="Image1" width="64" height="77" /></div>
+
 <table width="900" border="0" align="center" cellpadding="10" cellspacing="0">
   <tbody>
     <tr>
@@ -164,6 +270,9 @@ function showPicture(filename) {
     </tr>
     <tr>
       <td id="body" height="72" style="position:relative">
+	  <div id="parent" style="color:#0000CC">
+	    <div id="son" style="left: 8px; top: 178px; font-size:14px; height: 163px;">中国是世界四大文明古国（古巴比伦、古埃及、古印度和古代中国）之一。古老的中华农业科技文明可以追溯到至少六七千年以前。四五千年以前的科学知识萌芽和农、牧、手工业以及青铜冶铸等技术都有了长足的进步。两三千年以前逐渐形成了农学、医药学、天文学和数学等独特的科学体系，在地学、生物学以及制陶、矿冶、纺织、建筑等技术领域也取得了辉煌的成就。</div>
+		</div>
 	  <div id="subtitle" style="width:180px;z-index:1">
 	  <div class="subtitle" style="width:100px">
 	      <table border="0" align="right" cellspacing="0">
