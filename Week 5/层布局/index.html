@@ -19,17 +19,17 @@ body {
 -->
 </style></head>
 <script>
-function visibleMenu1() {
-	document.getElementById("menu1").hidden = false;
+function visibleMenu1(menu) {
+	document.getElementById(menu).hidden = false;
 }
 
-function hiddenMenu1() {
-	document.getElementById("menu1").hidden = true;
+function hiddenMenu1(menu) {
+	document.getElementById(menu).hidden = true;
 }
 </script>
 
 <body style="text-align: left">
-<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+<table width="800" border="0" align="center" cellpadding="10" cellspacing="0">
   <tbody>
     <tr>
       <td align="center"><div style="width:600px" align="center"><img src="images/title.jpg" width="600" height="105" /></div></td>
@@ -40,11 +40,11 @@ function hiddenMenu1() {
 	  <div class="subtitle" style="width:100px">
 	      <table border="0" align="right" cellspacing="0">
 	        <tr>
-	          <td><img onmouseover="visibleMenu1()" onmouseout="hiddenMenu1()" src="images/menu1.gif" width="99" height="44" /></td>
+	          <td><img onmouseover="visibleMenu1('menu1')" onmouseout="hiddenMenu1('menu1')" src="images/menu1.gif" width="99" height="44" /></td>
               </tr>
 			  <td height="20"></td>
 	        <tr>
-	          <td><img src="images/menu2.gif" width="99" height="44" /></td>
+	          <td><img onmouseover="visibleMenu1('menu2')" onmouseout="hiddenMenu1('menu2')" src="images/menu2.gif" width="99" height="44" /></td>
               </tr>
 			  <td height="20"></td>
 	        <tr>
@@ -73,6 +73,22 @@ function hiddenMenu1() {
           </tr>
           <tr>
             <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">印刷术</td>
+          </tr>
+        </table>
+	  </div>
+      <div id="menu2" class="subsubtitle" style="margin-top:60px" hidden="hidden">
+	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">浑象</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">简仪</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">浑仪</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">铜漏壶</td>
           </tr>
         </table>
 	  </div>
