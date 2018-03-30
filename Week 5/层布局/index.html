@@ -14,7 +14,7 @@ body {
 }
 .subsubtitle {
 	float: right;
-	font-size: 15px;
+	font-size: 12px;
 }
 -->
 </style></head>
@@ -48,19 +48,19 @@ function hiddenMenu1(menu) {
               </tr>
 			  <td height="20"></td>
 	        <tr>
-	          <td><img src="images/menu3.gif" width="99" height="44" /></td>
+	          <td><img onmouseover="visibleMenu1('menu3')" onmouseout="hiddenMenu1('menu3')" src="images/menu3.gif" width="99" height="44" /></td>
               </tr>
 			  <td height="20"></td>
 	        <tr>
-	          <td><img src="images/menu4.gif" width="99" height="44" /></td>
+	          <td><img onmouseover="visibleMenu1('menu4')" onmouseout="hiddenMenu1('menu4')"  src="images/menu4.gif" width="99" height="44" /></td>
               </tr>
 			  <td height="20"></td>
 	        <tr>
-	          <td><img src="images/menu5.gif" width="99" height="44" /></td>
+	          <td><img onmouseover="visibleMenu1('menu5')" onmouseout="hiddenMenu1('menu5')"  src="images/menu5.gif" width="99" height="44" /></td>
               </tr>
 	        </table>  
 		  </div>
-	   <div id="menu1" class="subsubtitle" hidden="hidden">
+	   <div id="menu1" class="subsubtitle" hidden="hidden" onmouseover="visibleMenu1('menu1')" onmouseout="hiddenMenu1('menu1')" >
 	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
           <tr>
             <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">指南针</td>
@@ -76,7 +76,7 @@ function hiddenMenu1(menu) {
           </tr>
         </table>
 	  </div>
-      <div id="menu2" class="subsubtitle" style="margin-top:60px" hidden="hidden">
+      <div id="menu2" class="subsubtitle" style="margin-top:60px" hidden="hidden" onmouseover="visibleMenu1('menu2')" onmouseout="hiddenMenu1('menu2')">
 	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
           <tr>
             <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">浑象</td>
@@ -92,7 +92,49 @@ function hiddenMenu1(menu) {
           </tr>
         </table>
 	  </div>
-	    
+	    <div id="menu3" class="subsubtitle" style="margin-top:130px" hidden="hidden" onmouseover="visibleMenu1('menu3')" onmouseout="hiddenMenu1('menu3')">
+	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">古代水利</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">古代农业</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">水利文物</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">农业发展</td>
+          </tr>
+        </table>
+	  </div> 
+      <div id="menu4" class="subsubtitle" style="margin-top:190px" hidden="hidden" onmouseover="visibleMenu1('menu4')" onmouseout="hiddenMenu1('menu4')">
+	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">古代铸剑术</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">冶铸文物</td>
+          </tr>
+        </table>
+	  </div> 
+      <div id="menu5" class="subsubtitle" style="margin-top:265px" hidden="hidden" onmouseover="visibleMenu1('menu5')" onmouseout="hiddenMenu1('menu5')">
+	    <table width="80" height="80" border="1" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="91" height="15" align="center" valign="middle" bgcolor="#C8BCBC">鲁班</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">蔡伦</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">祖冲之</td>
+          </tr>
+          <tr>
+            <td height="15" align="center" valign="middle" bgcolor="#C8BCBC">李时珍</td>
+          </tr>
+        </table>
+	  </div> 
+      
       </div>
         </td>
     </tr>
