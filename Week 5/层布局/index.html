@@ -16,6 +16,9 @@ body {
 	float: right;
 	font-size: 12px;
 }
+.pictureword {
+	font-size: 14px;
+}
 -->
 </style></head>
 <script>
@@ -26,17 +29,20 @@ function visibleMenu1(menu) {
 function hiddenMenu1(menu) {
 	document.getElementById(menu).hidden = true;
 }
+function showPicture(filename) {
+	document.getElementById("picture").src = "images/"+filename;
+}
 </script>
 
 <body style="text-align: left">
-<table width="800" border="0" align="center" cellpadding="10" cellspacing="0">
+<table width="900" border="0" align="center" cellpadding="10" cellspacing="0">
   <tbody>
     <tr>
-      <td align="center"><div style="width:600px" align="center"><img src="images/title.jpg" width="600" height="105" /></div></td>
+      <td align="center"><div style="width:700px" align="center"><img src="images/title.jpg" width="700" height="118" /></div></td>
     </tr>
     <tr>
-      <td id="body" height="72">
-	  <div id="subtitle" style="width:180px">
+      <td id="body" height="72" style="position:relative">
+	  <div id="subtitle" style="width:180px;z-index:1">
 	  <div class="subtitle" style="width:100px">
 	      <table border="0" align="right" cellspacing="0">
 	        <tr>
@@ -136,6 +142,29 @@ function hiddenMenu1(menu) {
 	  </div> 
       
       </div>
+      
+      <div style="margin-left:220px;margin-top:50px;position:absolute;z-index:2">
+        <table width="320" border="0" cellpadding="1" cellspacing="0" class="pictureword">
+          <tbody>
+            <tr>
+              <td><table width="320" border="1" align="center" cellpadding="1" cellspacing="0">
+                <tbody style="height:30px">
+                  <tr>
+                    <td bgcolor="#C8BCBC" onmouseover="showPicture('picture1.jpg')">四大发明</td>
+                    <td bgcolor="#C8BCBC" onmouseover="showPicture('picture2.jpg')">天文历法</td>
+                    <td bgcolor="#C8BCBC" onmouseover="showPicture('picture3.jpg')">农业水利</td>
+                    <td bgcolor="#C8BCBC" onmouseover="showPicture('picture4.jpg')">铜铁冶铸</td>
+                    <td bgcolor="#C8BCBC" onmouseover="showPicture('picture5.jpg')">华夏名家</td>
+                  </tr>
+                </tbody>
+              </table></td>
+            </tr>
+            <tr>
+              <td><img id="picture" src="images/back.jpg" width="320" /></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
         </td>
     </tr>
   </tbody>
