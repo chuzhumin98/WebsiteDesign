@@ -27,7 +27,8 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/JavaScript">
 <!--
-function MM_preloadImages() { //v3.0
+function MM_preloadImages() { //v3.0	
+  document.getElementById("cvcontent").hidden = "hidden";	
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -76,6 +77,14 @@ function MM_nbGroup(event, grpName) { //v6.0
 }
 //-->
 </script>
+<script type="text/JavaScript">
+function loadCVContent() {
+	document.getElementById("cvcontent").hidden = false;	
+}
+function hideCVContent() {
+	document.getElementById("cvcontent").hidden = true;	
+}
+</script>
 </head>
 
 <body class="body" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
@@ -101,15 +110,16 @@ function MM_nbGroup(event, grpName) { //v6.0
   </ul>
 </nav>
 <br />
-<div id="cv">
+<div id="cv" onmouseover="loadCVContent()" onMouseOut="hideCVContent()">
 <table  class="contents">
 <tr class="contents">
-<td width="500px" height="270px"  class="contents">
-<img src="img/cv-1.jpg" width="480px" height="270px" />
+<td width="500px" height="350px"  class="contents" valign="middle">
+<img src="img/cv-1.jpg" width="495px" height="300px" />
 </td>
-<td width="500px" height="270px" align="left" style="text-align:left;"  class="contents">
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="cvcontent">
 <p>
-计算机视觉是一门研究如何使机器“看”的科学，更进一步的说，就是指用摄影机和计算机代替人眼对目标进行识别、跟踪和测量等机器视觉，并进一步做图像处理，用计算机处理成为更适合人眼观察或传送给仪器检测的图像。
+<a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank"><b><font color="#FF0B0F">计算机视觉</font></b></a>是一门研究如何使机器“看”的科学，更进一步的说，就是指用摄影机和计算机代替人眼对目标进行识别、跟踪和测量等机器视觉，并进一步做图像处理，用计算机处理成为更适合人眼观察或传送给仪器检测的图像。
 </p>
 <p>
 作为一个工程学科，计算机视觉寻求基于相关理论与模型来创建计算机视觉系统。这类系统的组成部分包括：
@@ -120,7 +130,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <li>物体与环境建模（例如工业检查，医学图像分析和拓扑建模）</li>
 <li>交感互动（例如人机互动的输入设备）</li>
 </ol>
-</p>
+</p></div>
 </td>
 </tr></table>
 </div>
