@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <title>主页</title>
 <style>
-body {
+.body {
 	margin: 0 auto;
 	width: 1050px;
-	border-left: 1px solid #000000;
-	border-right: 1px solid #000000;
+	/*border-left: 1px solid #000000;
+	border-right: 1px solid #000000; */
+	text-align: center;
+}
+.injumbotron {
+	margin-left: 30px;
+	margin-right: 30px;
 }
 </style>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -64,7 +71,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 </head>
 
-<body style="text-align:center;" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
+<body class="body" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
 <div id="logo" align="center">
 <img src="img/mygif2.gif" width="350px" height="150px" />
 <img src="img/ai-v1.png" width="300px" height="150px" />
@@ -80,6 +87,12 @@ function MM_nbGroup(event, grpName) { //v6.0
     <td width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','guanyuwomen','category/guanyuwomen_down.jpg',1)" onMouseOver="MM_nbGroup('over','guanyuwomen','category/guanyuwomen_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="guanyuwomen" src="category/guanyuwomen.jpg" border="0" alt="" onLoad=""></a></td>
   </tr>
 </table>
-</div>
+</div><br /><br />
+<div class="jumbotron" align="left">
+<div class="injumbotron">
+  <h1>欢迎关注人工智能</h1>
+  <p><b>人工智能</b>（Artificial Intelligence, <b>AI</b>）亦称<b>机器智能</b>，是指由人制造出来的机器所表现出来的智能。通常人工智能是指通过普通计算机程序的手段实现的人类智能技术。</p>
+  <p><a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Artificial_intelligence" role="button" target="_blank">了解更多</a></p>
+</div></div>
 </body>
 </html>
