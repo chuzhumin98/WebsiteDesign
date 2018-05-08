@@ -1,0 +1,9 @@
+/* CSS Document */
+
+table .contents {
+    border: 0px;
+}
+table th,
+table td .contents {
+  border: 0px;
+}
