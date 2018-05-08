@@ -91,6 +91,13 @@ function loadImageContent() {
 function hideImageContent() {
 	document.getElementById("Imagecontent").hidden = true;	
 }
+function changeCVImage(num) {
+	if (num == 0) {
+		document.getElementById("CVImageSrc").src = "img/cv-2.png";
+	} else {
+		document.getElementById("CVImageSrc").src = "img/cv-1.jpg";
+	}
+}
 </script>
 </head>
 
@@ -120,8 +127,8 @@ function hideImageContent() {
 <div id="cv" onmouseover="loadCVContent()" onMouseOut="hideCVContent()">
 <table  class="contents">
 <tr class="contents">
-<td width="500px" height="350px"  class="contents" valign="middle">
-<img src="img/cv-1.jpg" width="495px" height="300px" />
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeCVImage(0)" onMouseOut="changeCVImage(1)">
+<img src="img/cv-1.jpg" width="495px" height="300px" id="CVImageSrc"/>
 </td>
 <td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
 <div id="cvcontent">
