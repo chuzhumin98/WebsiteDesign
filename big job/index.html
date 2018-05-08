@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>主页</title>
+<style>
+body {
+	margin: 0 auto;
+	width: 1050px;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body style="text-align:center;" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
+<div id="logo" align="center">
+<img src="img/mygif2.gif" width="350px" height="150px" />
+<img src="img/ai-v1.png" width="300px" height="150px" />
+<img src="img/mygif1.gif" width="350px" height="150px" />
+</div>
+<div id="category">
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td width="150" align="center"><a href="javascript:;" target="_top" onClick="MM_nbGroup('down','group1','shouye','category/shouye_down.jpg',1)" onMouseOver="MM_nbGroup('over','shouye','category/shouye_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="category/shouye.jpg" alt="" name="shouye" width="70" height="34" border="0" onload=""></a></td>
+    <td width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','xuekelingyu','category/xuekelingyu_down.jpg',1)" onMouseOver="MM_nbGroup('over','xuekelingyu','category/xuekelingyu_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="xuekelingyu" src="category/xuekelingyu.jpg" border="0" alt="" onLoad=""></a></td>
+    <td width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','chanyechengguo','category/chanyechengguo_down.jpg',1)" onMouseOver="MM_nbGroup('over','chanyechengguo','category/chanyechengguo_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="chanyechengguo" src="category/chanyechengguo.jpg" border="0" alt="" onLoad=""></a></td>
+    <td width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','yingshizuopin','category/yingshizuopin_down.jpg',1)" onMouseOver="MM_nbGroup('over','yingshizuopin','category/yingshizuopin_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="yingshizuopin" src="category/yingshizuopin.jpg" border="0" alt="" onLoad=""></a></td>
+    <td width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','guanyuwomen','category/guanyuwomen_down.jpg',1)" onMouseOver="MM_nbGroup('over','guanyuwomen','category/guanyuwomen_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="guanyuwomen" src="category/guanyuwomen.jpg" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
