@@ -91,11 +91,31 @@ function loadImageContent() {
 function hideImageContent() {
 	document.getElementById("Imagecontent").hidden = true;	
 }
+function loadIRContent() {
+	document.getElementById("ircontent").hidden = false;	
+}
+function hideIRContent() {
+	document.getElementById("ircontent").hidden = true;	
+}
 function changeCVImage(num) {
 	if (num == 0) {
 		document.getElementById("CVImageSrc").src = "img/cv-2.png";
 	} else {
 		document.getElementById("CVImageSrc").src = "img/cv-1.jpg";
+	}
+}
+function changeImageRImage(num) {
+	if (num == 0) {
+		document.getElementById("imageRSrc").src = "img/imagerecognition-2.png";
+	} else {
+		document.getElementById("imageRSrc").src = "img/imagerecognition-1.jpg";
+	}
+}
+function changeIRImage(num) {
+	if (num == 0) {
+		document.getElementById("IRImageSrc").src = "img/IR-2.png";
+	} else {
+		document.getElementById("IRImageSrc").src = "img/IR-1.jpg";
 	}
 }
 </script>
@@ -159,10 +179,25 @@ function changeCVImage(num) {
 ，是指利用计算机对图像进行处理、分析和理解，以识别各种不同模式的目标和对像的技术。一般工业使用中，采用工业相机拍摄图片，然后再利用软件根据图片灰阶差做进一步识别处理，图像识别软件国外代表的有康耐视等，国内代表的有图智能等。另外在地理学中指将遥感图像进行分类的技术。</font>
 </p></div>
 </td>
-<td width="500px" height="280px"  class="contents" valign="middle">
-<a href="imagerecognition.html"><img src="img/imagerecognition-1.jpg" width="495px" height="260px" /></a>
+<td width="500px" height="280px"  class="contents" valign="middle" onMouseOver="changeImageRImage(0)" onMouseOut="changeImageRImage(1)">
+<a href="imagerecognition.html"><img src="img/imagerecognition-1.jpg" width="495px" height="260px" id="imageRSrc" /></a>
 </td>
 </tr></table>
 </div>
+<div id="ir" onmouseover="loadIRContent()" onMouseOut="hideIRContent()">
+<table class="contents">
+<tr class="contents">
+<td width="500px" height="320px"  class="contents" valign="middle" onMouseOver="changeIRImage(0)" onMouseOut="changeIRImage(1)">
+<a href="#"><img src="img/IR-1.jpg" width="495px" height="300px" id="IRImageSrc"/></a>
+</td>
+<td width="500px" height="320px" align="left" style="text-align:left;"  class="contents">
+<div id="ircontent">
+<p>
+<a href="https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/831904" target="_blank"><b><font color="#FF0B0F">信息检索</font></b></a>（Information Retrieval）是用户进行信息查询和获取的主要方式，是查找信息的方法和手段。狭义的信息检索仅指信息查询（Information Search）。即用户根据需要，采用一定的方法，借助检索工具，从信息集合中找出所需要信息的查找过程。广义的信息检索是信息按一定的方式进行加工、整理、组织并存储起来，再根据信息用户特定的需要将相关信息准确的查找出来的过程。又称信息的存储于检索。一般情况下，信息检索指的就是广义的信息检索。
+</p>
+</div>
+</td>
+</tr></table>
+</div><br />
 </body>
 </html>
