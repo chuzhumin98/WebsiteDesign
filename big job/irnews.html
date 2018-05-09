@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>学科领域</title>
+<style>
+.body {
+	margin: 0 auto;
+	width: 1050px;
+	/*border-left: 1px solid #000000;
+	border-right: 1px solid #000000; */
+	text-align: center;
+}
+.injumbotron {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+#logo {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/markdown.css" />
+<link rel="stylesheet" type="text/css" href="css/commonused.css" />
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0	
+  document.getElementById("cvcontent").hidden = "hidden";	
+  document.getElementById("Imagecontent").hidden = true;
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body class="body" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
+<div id="logo" align="center">
+<img src="img/mygif2.gif" width="350px" height="150px" />
+<img src="img/ai-v1.png" width="300px" height="150px" />
+<img src="img/mygif1.gif" width="350px" height="150px" />
+</div><br />
+<div id="category">
+<table border="0" cellpadding="0" cellspacing="0" align="center" class="contents">
+  <tr class="contents">
+    <td  class="contents" width="150" align="center"><a href="index.html" target="_top" onClick="MM_nbGroup('down','group1','shouye','category/shouye_down.jpg',1)" onMouseOver="MM_nbGroup('over','shouye','category/shouye_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="category/shouye.jpg" alt="" name="shouye" width="70" height="34" border="0" onload=""></a></td>
+    <td class="contents" width="150" align="center"><a href="field.html" target="_top" onClick="MM_nbGroup('down','group1','xuekelingyu','category/xuekelingyu_down.jpg',1)" onMouseOver="MM_nbGroup('over','xuekelingyu','category/xuekelingyu_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="xuekelingyu" src="category/xuekelingyu.jpg" border="0" alt="" onLoad=""></a></td>
+    <td class="contents" width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','chanyechengguo','category/chanyechengguo_down.jpg',1)" onMouseOver="MM_nbGroup('over','chanyechengguo','category/chanyechengguo_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="chanyechengguo" src="category/chanyechengguo.jpg" border="0" alt="" onLoad=""></a></td>
+    <td class="contents" width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','yingshizuopin','category/yingshizuopin_down.jpg',1)" onMouseOver="MM_nbGroup('over','yingshizuopin','category/yingshizuopin_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="yingshizuopin" src="category/yingshizuopin.jpg" border="0" alt="" onLoad=""></a></td>
+    <td class="contents" width="150" align="center"><a href="aboutus.html" target="_top" onClick="MM_nbGroup('down','group1','guanyuwomen','category/guanyuwomen_down.jpg',1)" onMouseOver="MM_nbGroup('over','guanyuwomen','category/guanyuwomen_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="guanyuwomen" src="category/guanyuwomen.jpg" border="0" alt="" onLoad=""></a></td>
+  </tr>
+</table>
+</div><br />
+<nav aria-label="领域分类">
+  <ul class="pager">
+    <li class="previous"><a href="field.html"><span aria-hidden="true">&larr;</span> 学科领域</a></li>
+  </ul>
+</nav>
+<br />
+<div align="left">
+<div  id='write'  class = 'is-node show-fences-line-number'>
+<h1 align="center"><a name='header-n0' class='md-header-anchor '></a>信息检索与搜索引擎优化什么关系？</h1><p align="center">   来源：小小课堂网  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<font color="#B0B0B0">2018-04-14 11:12</font></p>
+<p>什么是搜索引擎优化？是不是可以理解为百度搜索工程师对百度搜索程序进行优化呢？当然可以这样想。不过一般我们说的搜索引擎优化是指SEO，遵从搜索引擎的规则获取更好的自然搜索排名的技术。那么搜索引擎和信息检索之间又有什么关联呢？</p><p>今天，小小课堂网为大家带来的是搜索引擎和信息检索的关系。希望对您有所帮助。</p>
+<p><strong><font color="#E50003">一、什么是搜索引擎优化？</font></strong></p>
+<p>搜索引擎优化，英文SEO，全称Search Engine Optimization。SEO是什么？SEO是一种利用搜索引擎的搜索规则来提高目前网站在有关搜索引擎内的自然排名的方式</p><p>简单来讲，就是网站优化后，可以从百度搜索、360搜索、搜狗搜索等搜索引擎中，获取更多免费的流量。</p><p>企业可以通过搜索引擎优化获取更多的精准流量，依靠网站的优秀的文案，让访客在网站完成线上交易。</p><p>一般知名的互联网企业都有专业的SEO团队来运作，可能分工比较细，比如SEO主管、SEO编辑、SEO外链员、网站程序员、网站美工等等。</p>
+<p><strong><font color="#E50003">二、什么是搜索引擎？</font></strong></p>
+<p>搜索不就是“百度一下”吗？这个答案正确与否，看完文章就清楚了。国内大部分人在网上寻找所需知识的重要途径就是百度搜索——<a href='www.baidu.com' target='_blank' >www.baidu.com</a>，但这仅仅是国内份额最大的搜索引擎。</p><p>简单来说，就是拥有抓取、存储网站页面功能的，具有庞大精准数据库的，可以针对用户搜索“词语”，提供网页排名的一套复杂系统。</p><p>PS：排名根据权威性、相关性以及个人化搜索（地理定位、社会搜索和用户历史搜索）。</p><p><img src='img/irnews-1.jpeg' alt='img' /></p><p>百度首页，仅仅是页面展示，我们输入的“词语”，在点击“百度一下”时，提交给了搜索引擎这个系统来处理。</p><p>对国内而言，比较出名的有以下几个搜索引擎，而搜索引擎优化工作也是针对它们而开展的。</p><p>1、百度：<a href='www.baidu.com' target='_blank' >www.baidu.com</a></p><p>中国份额最大的搜索引擎，百度一下，你就知道。百度几乎成为了搜索的代名词。</p><p>2、360：<a href='www.so.com' target='_blank' >www.so.com</a></p><p>360搜索份额也是不可小觑，依靠终端产品如360安全卫士、360杀毒、360浏览器，速度占领中国搜索引擎的份额。</p><p>3、搜狗：<a href='www.sogou.com' target='_blank' >www.sogou.com</a></p><p>小小课堂网认为，搜狗搜索发展是在融合一些东西，如支持微信文章搜索、知乎文章搜索等等。虽然，迎合了某些人的需求，可比起百度都是自己的产品来讲，就差距就拉开了，如百度百科、百度知道、百度文库、百度贴吧等等。</p><p>4、必应：<a href='www.bing.com' target='_blank' >www.bing.com</a></p><p>微软的必应搜索，份额如何占据的，自然是依托Windows系统，中国比例较低，但目前世界范围份额比较大，同时在稳定增长。</p><p>5、谷歌：<a href='www.google.com' target='_blank' >www.google.com</a></p><p>世界上份额较大的搜索引擎之一。</p><p>6、神马：m.sm.cn</p><p>神马搜索，针对手机客户端，小小课堂网感觉手机端还不错吧。</p><p>当然，还有其他比较小众搜索引擎，再次就不做举例。</p>
+<p><strong><font color="#E50003">三、什么是信息检索？</font></strong></p>
+<p>信息检索，是关于信息的结构、分析、存储、搜索和检索的领域。</p><p>“搜索”=“信息检索”。这是人们通俗的说法，但并不正确。信息检索领域非常大，而搜索引擎只是信息检索技术在大规模文本集合上的实际应用。也就是说，信息检索包括搜索引擎。所以，很多时候，SEO从业者，会看一些有关信息检索的书籍，对搜索引擎优化会又更深层次的理解。</p><p>下面小小课堂网来简单列举并非搜索引擎的内容搜索方式，让大家更明白这一点。</p><p>1、Windows系统文件搜索</p><p>搜索硬盘内已有文件，通常需要设定一个范围，比如G盘内搜索某本电子书，如《搜索引擎信息检索实践》。不知道范围就扩大到计算机搜索。</p><p>2、社会化媒体中的搜索</p><p>现在很多人搜索信息，已经在社会化媒体中进行了。如微博、微信、豆瓣、知乎中进行搜索。</p><p>3、网盘搜索</p><p>网络存储的火爆，貌似每个人都有几个云盘。如百度网盘、新浪微盘、微云网盘等等。360云盘本来挺好用，后来挂了。</p><p>4、磁力搜索（种子搜索）</p><p>磁力链接，专门用来识别和下载网络文件的一种特殊链接。</p><p>5、图片搜索</p><p>好看、专业的图片并非在“百度图片”，因为百度图片都是靠蜘蛛自动抓取而来，没有质量保证。</p><p>6、资料搜索</p><p>如互联网资料下载，通常要用到一些资料下载网。</p>
+<p><strong><font color="#E50003">四、搜索引擎面对的挑战</font></strong></p>
+<p>信息检索技术让搜索引擎得以飞速的发展的同时，面对互联网的日新月异却带给了搜索引擎越来越严峻的挑战。</p><p>1、搜索引擎更加人工智能</p><p>小小课堂网之前讲过的百度下拉和百度相关搜索都是人工智能的体现，此外当用户不小心输入错别字，搜索引擎会返回用户真正想输入的正确的词的结果，如搜索“博人转”，会显示“博人传”。还有个性化搜索（根据用户的喜欢，出现不同的排名结果）、地区化搜索（每个地区搜同一个词，出现不同的排名），搜索引擎真的是越来越智能。</p><p>2、巨大的数据存储和运算</p><p>现在网站的数量可想而知，搜索引擎必须要有庞大的数据库来存储这些页面内容，并且还能处理这些页面之间通过超链接的千丝万缕的联系。</p><p>3、页面抓取快而全面</p><p>如果不能及时在搜索引擎中显示出最新的内容，相信很多人就会放弃搜索引擎了。可网站这么多，如何快速而全面的抓取页面，对搜索引擎是极大的考验。</p><p>4、快速建立索引与查询处理</p><p>对于抓取的数据，搜索引擎需要快速对页面进行索引处理与排名工作，当用户查询时，快速返回搜索结果，这就需要在海量的数据库中进行快速准确的查询处理。</p><p>文章来源：<a href='https://www.xxkt.org/3329' target='_blank' >https://www.xxkt.org/3329</a></p></div></div>
+</body>
+</html>

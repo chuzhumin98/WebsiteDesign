@@ -105,10 +105,8 @@ function MM_nbGroup(event, grpName) { //v6.0
 <br />
 <div align="left">
 <div  id='write'  class = 'is-node show-fences-line-number'>
-<h1 align="center">GluonCV — 计算机视觉的深度学习工具包</h1>
-<p align="center">本文作者：奕欣 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;   <font color="#B0B0B0">2018-04-29 08:20</font></p>
-<p>&nbsp;</p><p>雷锋网<font color="#F38D28">(公众号：雷锋网)</font> AI 科技评论按：本文首发于 ApacheMxNet，作者李沐， AI 科技评论获作者授权转载，经不改动原意的编辑。</p>
-<br /><p><img src="img/GluonCV.jpg"  /></p><br />
+<h1 align="center">GluonCV — 计算机视觉的深度学习工具包</h1><p align="center">本文作者：奕欣 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;   <font color="#B0B0B0">2018-04-29 08:20</font></p><p>&nbsp;</p><p>雷锋网<font color="#F38D28">(公众号：雷锋网)</font> AI 科技评论按：本文首发于 ApacheMxNet，作者李沐， AI 科技评论获作者授权转载，经不改动原意的编辑。</p>
+<p><img src="img/GluonCV.jpg"  /></p><br />
 <h3><a name='header-n121' class='md-header-anchor '></a><font color="#E50003">起源</font></h3>
 <p>
 有人曾问我，开发 MXNet 时候感觉最难的是什么。我会毫不犹豫的觉得「重复论文里的实验结果」是最困难的一点。举三个例子：</p><ul><li>Lin Min（Network in network 提出者）在 16 年的时候发现 MXNet 在 ImageNet 上面训练的模型精度比 Torch 低 1%。为了 debug 这个事情甚至开发了一个插件可以在 MXNet 跑任意 Torch 的代码来对比结果。最后发现原因是我们图片裁剪后默认使用 JPEG 的 85 质量保存，改成 95 质量就可以补上丢掉的精度了。</li><li>在 Inception V3 论文出现后 Bing Xu（GAN 的作者之一）第一时间去重复这个工作。因为 Google 没有公开代码，而且论文里面细节不明确。幸好认识原论文作者可以问问题，但前后也花了好些天才重复实现出来。</li><li>我在 CMU 的博士导师之一（他在 Google 报告给 Jeff Dean）曾在一次报告里面说，他参与了一个内部的从 TensorFlow 前一代系统移植代码的工作，发现在 TensorFlow 上精度死活丢了个点。前后花费了好几个月时间找问题，最后发现是移植的代码在使用图片增强的时候顺序跟原先不一样。</li></ul><p>三个例子的主人公都是顶尖的深度学习领域研究人员，但仍然很容易被一些细微的实验细节耗费大量宝贵的时间。一个模型通常多达数十到数百层，不管是模型初始化和数据读取都是随机，每次训练也需数个小时，这些都让 debug 变得很困难。</p><p>当然，幸运的是，最近这些年随着开源的深入人心，很多论文都可以找到开源的实现。对于大部分用户来说不需要自己从头开始实现一篇论文，去 Github 找个实现用就行了。但这个并不能解决所有问题：</p><ol><li>网上的实现良莠不齐，很多都是新人练手之做。可能一大半不能重复出论文的结果</li><li>每个项目的实现多多少少有点不同，例如输入数据格式，用什么样的深度学习框架，代码风格不一样。每换一个项目上手成本很大。</li><li>个人维护的项目通常只关注在某些地方，例如只关心某个数据集上的训练。但实际使用的时候大家会关心如何部署，如何换一个数据集训练之类。需要花费时间做二次开发。</li><li>最后代码维护者很容易弃坑。例如我博士期间写过一些项目，但之后工作和生活重心转移，没有精力才去回复用户的提问。对于用户来说，如果碰到一个坑，如果不能很快的沟通维护者，很容易导致被小地方困住大量时间。</li></ol><p>理解到这些痛点后我们几位从事计算机视觉的小伙伴，Zhi Zhang (@zhreshold), Hang Zhang (@zhanghang1989), Tong He (@hetong007), Eric Xie (@piiswrong), 拍了拍脑袋说，那我们来动手做一个工具包来试着解决这些问题吧。</p>
