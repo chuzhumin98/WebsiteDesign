@@ -31,6 +31,7 @@ function MM_preloadImages() { //v3.0
   document.getElementById("anncontent").hidden = true;
   document.getElementById("svmcontent").hidden = true;
   document.getElementById("dtcontent").hidden = true;
+  document.getElementById("cacontent").hidden = true;
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -122,6 +123,20 @@ function changeDTImage(num) {
 		document.getElementById("DTImageSrc").src = "img/DT-1.png";
 	}
 }
+function loadCAContent(num) {
+	if (num == 0) {
+		document.getElementById("cacontent").hidden = true;		
+	} else {
+		document.getElementById("cacontent").hidden = false;		
+	}
+}
+function changeCAImage(num) {
+	if (num == 0) {
+		document.getElementById("CAImageSrc").src = "img/CA-2.png";
+	} else {
+		document.getElementById("CAImageSrc").src = "img/CA-1.jpeg";
+	}
+}
 </script>
 </head>
 
@@ -207,6 +222,26 @@ function changeDTImage(num) {
 <li><a href="http://blog.sina.com.cn/s/blog_70497dfa01019k7o.html" target="_blank">决策树：C5.0（二）</a></li>
 </ol>
 </p></div>
+</td>
+</tr></table>
+</div><br />
+<div id="ca" onmouseover="loadCAContent(1)" onMouseOut="loadCAContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeCAImage(0)" onMouseOut="changeCAImage(1)">
+<div id="cacontent" align="left">
+<p>
+<b>参考阅读：</b>
+<ol>
+<li><a href="https://blog.csdn.net/cherdw/article/details/54177934" target="_blank">机器学习算法——聚类分析</a></li>
+<li><a href="https://blog.csdn.net/chixujohnny/article/details/50332561" target="_blank">聚类算法（一）：k-均值 (k-means)算法</a></li>
+<li><a href="https://www.cnblogs.com/pinard/p/6208966.html" target="_blank">DBSCAN密度聚类算法</a></li>
+<li><a href="http://www.cnblogs.com/sylvanas2012/p/5117056.html" target="_blank">Self Organizing Maps (SOM): 一种基于神经网络的聚类算法</a></li>
+</ol>
+</p></div>
+</td>
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeCAImage(0)" onMouseOut="changeCAImage(1)">
+<a href="https://en.wikipedia.org/wiki/Cluster_analysis" target="_blank"><img src="img/CA-1.jpeg" width="495px" height="300px" id="CAImageSrc"/></a>
 </td>
 </tr></table>
 </div><br />
