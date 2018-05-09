@@ -28,10 +28,8 @@
 <script type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0	
-  document.getElementById("cvcontent").hidden = "hidden";	
-  document.getElementById("Imagecontent").hidden = true;
-  document.getElementById("ircontent").hidden = "hidden";
-  document.getElementById("nlpcontent").hidden = "hidden";
+  document.getElementById("anncontent").hidden = true;
+  document.getElementById("svmcontent").hidden = true;
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -95,6 +93,20 @@ function changeANNImage(num) {
 		document.getElementById("ANNImageSrc").src = "img/ANN-1.jpeg";
 	}
 }
+function loadSVMContent(num) {
+	if (num == 0) {
+		document.getElementById("svmcontent").hidden = true;		
+	} else {
+		document.getElementById("svmcontent").hidden = false;		
+	}
+}
+function changeSVMImage(num) {
+	if (num == 0) {
+		document.getElementById("SVMImageSrc").src = "img/SVM-2.png";
+	} else {
+		document.getElementById("SVMImageSrc").src = "img/SVM-1.png";
+	}
+}
 </script>
 </head>
 
@@ -139,6 +151,27 @@ function changeANNImage(num) {
 
 </ol>
 </p></div>
+</td>
+</tr></table>
+</div><br />
+<div id="svm" onmouseover="loadSVMContent(1)" onMouseOut="loadSVMContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="svmcontent">
+<p>
+<b>参考阅读：</b>
+<ol>
+<li><a href="https://blog.csdn.net/v_july_v/article/details/7624837" target="_blank">支持向量机通俗导论（理解SVM的三层境界）</a></li>
+<li><a href="http://sklearn.apachecn.org/cn/0.19.0/modules/svm.html" target="_blank">支持向量机— scikit-learn 0.19.0 中文文档</a></li>
+<li><a href="http://fangs.in/post/thinkstats/svm1/" target="_blank">我所理解的SVM(支持向量机)2——核函数的应用</a></li>
+<li><a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/" target="_blank">LIBSVM -- A Library for Support Vector Machines</a></li>
+<li><a href="https://blog.csdn.net/qq_34531825/article/details/52891780" target="_blank">支持向量机学习之3-SVR（回归）</a></li>
+</ol>
+</p></div>
+</td>
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeSVMImage(0)" onMouseOut="changeSVMImage(1)">
+<a href="https://en.wikipedia.org/wiki/Support_vector_machine" target="_blank"><img src="img/SVM-1.png" width="495px" height="300px" id="SVMImageSrc"/></a>
 </td>
 </tr></table>
 </div><br />
