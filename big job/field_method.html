@@ -30,6 +30,7 @@
 function MM_preloadImages() { //v3.0	
   document.getElementById("anncontent").hidden = true;
   document.getElementById("svmcontent").hidden = true;
+  document.getElementById("dtcontent").hidden = true;
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -107,6 +108,20 @@ function changeSVMImage(num) {
 		document.getElementById("SVMImageSrc").src = "img/SVM-1.png";
 	}
 }
+function loadDTContent(num) {
+	if (num == 0) {
+		document.getElementById("dtcontent").hidden = true;		
+	} else {
+		document.getElementById("dtcontent").hidden = false;		
+	}
+}
+function changeDTImage(num) {
+	if (num == 0) {
+		document.getElementById("DTImageSrc").src = "img/DT-2.png";
+	} else {
+		document.getElementById("DTImageSrc").src = "img/DT-1.png";
+	}
+}
 </script>
 </head>
 
@@ -172,6 +187,26 @@ function changeSVMImage(num) {
 </td>
 <td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeSVMImage(0)" onMouseOut="changeSVMImage(1)">
 <a href="https://en.wikipedia.org/wiki/Support_vector_machine" target="_blank"><img src="img/SVM-1.png" width="495px" height="300px" id="SVMImageSrc"/></a>
+</td>
+</tr></table>
+</div><br />
+<div id="dt" onmouseover="loadDTContent(1)" onMouseOut="loadDTContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeDTImage(0)" onMouseOut="changeDTImage(1)">
+<a href="https://en.wikipedia.org/wiki/Decision_tree" target="_blank"><img src="img/DT-1.png" width="495px" height="300px" id="DTImageSrc"/></a>
+</td>
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="dtcontent">
+<p>
+<b>参考阅读：</b>
+<ol>
+<li><a href="https://blog.csdn.net/u010089444/article/details/53241218" target="_blank">决策树（ID3、C4.5、CART）</a></li>
+<li><a href="http://sklearn.apachecn.org/cn/stable/modules/tree.html" target="_blank">决策树— scikit-learn 0.19.0 中文文档</a></li>
+<li><a href="https://www.jiqizhixin.com/articles/2017-07-31-3" target="_blank">从决策树到随机森林：树型算法的原理与实现</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_70497dfa01019k7o.html" target="_blank">决策树：C5.0（二）</a></li>
+</ol>
+</p></div>
 </td>
 </tr></table>
 </div><br />
