@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
-<title>学科领域</title>
+<title>产业成果</title>
 <style>
 .body {
 	margin: 0 auto;
@@ -28,8 +28,8 @@
 <script type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0	
-  document.getElementById("adcontent").hidden = true;
-  document.getElementById("facecontent").hidden = "hidden";	
+  document.getElementById("cvcontent").hidden = "hidden";	
+  document.getElementById("Imagecontent").hidden = true;
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -78,36 +78,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 }
 //-->
 </script>
-<script type="text/JavaScript">
-function loadADContent(num) {
-	if (num == 0) {
-		document.getElementById("adcontent").hidden = true;
-	} else {
-		document.getElementById("adcontent").hidden = false;
-	}	
-}
-function changeADImage(num) {
-	if (num == 0) {
-		document.getElementById("ADImageSrc").src = "img/AutoDrive-2.png";
-	} else {
-		document.getElementById("ADImageSrc").src = "img/AutoDrive-1.jpeg";
-	}
-}
-function loadFACEContent(num) {
-	if (num == 0) {
-		document.getElementById("facecontent").hidden = true;
-	} else {
-		document.getElementById("facecontent").hidden = false;
-	}	
-}
-function changeFACEImage(num) {
-	if (num == 0) {
-		document.getElementById("FACEImageSrc").src = "img/face-2.png";
-	} else {
-		document.getElementById("FACEImageSrc").src = "img/face-1.jpg";
-	}
-}
-</script>
 </head>
 
 <body class="body" onLoad="MM_preloadImages('category/shouye_down.jpg','category/shouye_over.jpg','category/xuekelingyu_down.jpg','category/xuekelingyu_over.jpg','category/chanyechengguo_down.jpg','category/chanyechengguo_over.jpg','category/yingshizuopin_down.jpg','category/yingshizuopin_over.jpg','category/guanyuwomen_down.jpg','category/guanyuwomen_over.jpg')">
@@ -119,41 +89,24 @@ function changeFACEImage(num) {
 <div id="category">
 <table border="0" cellpadding="0" cellspacing="0" align="center" class="contents">
   <tr class="contents">
-    <td class="contents" width="150" align="center"><a href="index.html" target="_top" onClick="MM_nbGroup('down','group1','shouye','category/shouye_down.jpg',1)" onMouseOver="MM_nbGroup('over','shouye','category/shouye_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="category/shouye.jpg" alt="" name="shouye" width="70" height="34" border="0" onload=""></a></td>
+    <td  class="contents" width="150" align="center"><a href="index.html" target="_top" onClick="MM_nbGroup('down','group1','shouye','category/shouye_down.jpg',1)" onMouseOver="MM_nbGroup('over','shouye','category/shouye_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="category/shouye.jpg" alt="" name="shouye" width="70" height="34" border="0" onload=""></a></td>
     <td class="contents" width="150" align="center"><a href="field.html" target="_top" onClick="MM_nbGroup('down','group1','xuekelingyu','category/xuekelingyu_down.jpg',1)" onMouseOver="MM_nbGroup('over','xuekelingyu','category/xuekelingyu_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="xuekelingyu" src="category/xuekelingyu.jpg" border="0" alt="" onLoad=""></a></td>
-    <td class="contents" width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','chanyechengguo','category/chanyechengguo_down.jpg',1)" onMouseOver="MM_nbGroup('over','chanyechengguo','category/chanyechengguo_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="chanyechengguo" src="category/chanyechengguo.jpg" border="0" alt="" onLoad=""></a></td>
+    <td class="contents" width="150" align="center"><a href="product.html" target="_top" onClick="MM_nbGroup('down','group1','chanyechengguo','category/chanyechengguo_down.jpg',1)" onMouseOver="MM_nbGroup('over','chanyechengguo','category/chanyechengguo_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="chanyechengguo" src="category/chanyechengguo.jpg" border="0" alt="" onLoad=""></a></td>
     <td class="contents" width="150" align="center"><a href="#" target="_top" onClick="MM_nbGroup('down','group1','yingshizuopin','category/yingshizuopin_down.jpg',1)" onMouseOver="MM_nbGroup('over','yingshizuopin','category/yingshizuopin_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="yingshizuopin" src="category/yingshizuopin.jpg" border="0" alt="" onLoad=""></a></td>
     <td class="contents" width="150" align="center"><a href="aboutus.html" target="_top" onClick="MM_nbGroup('down','group1','guanyuwomen','category/guanyuwomen_down.jpg',1)" onMouseOver="MM_nbGroup('over','guanyuwomen','category/guanyuwomen_over.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="guanyuwomen" src="category/guanyuwomen.jpg" border="0" alt="" onLoad=""></a></td>
   </tr>
 </table>
 </div><br />
-<div id="ad" onmouseover="loadADContent(1)" onMouseOut="loadADContent(0)">
-<table  class="contents">
-<tr class="contents">
-<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeADImage(0)" onMouseOut="changeADImage(1)">
-<a href="AutoDrivenews.html"><img src="img/AutoDrive-1.jpeg" width="495px" height="300px" id="ADImageSrc"/></a>
-</td>
-<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
-<div id="adcontent">
-<p>
-<a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank"><b><font color="#FF0B0F">自动驾驶汽车</font></b></a>，又称为无人驾驶汽车、电脑驾驶汽车或轮式移动机器人，是无人地面载具的一种，具有传统汽车的运输能力。作为自动化载具，自动驾驶汽车不需要人为操作即能感测其环境及导航。完全的自动驾驶汽车仍未全面商用化，大多数均为原型机及展示系统，部分可靠技术才下放至量产车型，但有关于自驾车逐渐成为现实，已经引起了很多有关于道德的讨论。
-</p></div>
-</td>
-</tr></table>
-</div><br />
-<div id="face" onmouseover="loadFACEContent(1)" onMouseOut="loadFACEContent(0)">
-<table  class="contents">
-<tr class="contents">
-<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
-<div id="facecontent">
-<p>
-<a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank"><b><font color="#FF0B0F">自动驾驶汽车</font></b></a>，又称为无人驾驶汽车、电脑驾驶汽车或轮式移动机器人，是无人地面载具的一种，具有传统汽车的运输能力。作为自动化载具，自动驾驶汽车不需要人为操作即能感测其环境及导航。完全的自动驾驶汽车仍未全面商用化，大多数均为原型机及展示系统，部分可靠技术才下放至量产车型，但有关于自驾车逐渐成为现实，已经引起了很多有关于道德的讨论。
-</p></div>
-</td>
-<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeFACEImage(0)" onMouseOut="changeFACEImage(1)">
-<a href="facenews.html"><img src="img/face-1.jpg" width="495px" height="300px" id="FACEImageSrc"/></a>
-</td>
-</tr></table>
-</div><br />
+<nav aria-label="产业成果">
+  <ul class="pager">
+    <li class="previous"><a href="product.html"><span aria-hidden="true">&larr;</span> 产业成果</a></li>
+  </ul>
+</nav>
+<br />
+<div align="left">
+<div  id='write'  class = 'is-node show-fences-line-number'><h1 align="center"><a name='header-n0' class='md-header-anchor '></a>有趣！人脸识别技术让你遇见“名画中的自己”！</h1><p align="center"><font color="#B0B0B0">2018年05月09日08:36</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 来源：<a href='http://paper.cnii.com.cn/rmydb/html/2018-05/08/nw.D110000rmydb_20180508_9-05.htm?div=-1'>人民邮电报社</a></p>
+<p>原标题：有趣！人脸识别技术让你遇见“名画中的自己”！</p><p><img src='img/facenews-1.jpg' alt='img' /></p><p>在近日举办的“2018首都网络安全日”展览现场，《人民邮电》报记者发现了一个非常有趣的应用展示：摄像头拍摄了体验者的面部照片之后，人工智能识别机器人“蚂可”就通过识别面部特征，从而在2000多幅世界名画中找到与用户照片相似度最高的画作人物，并介绍这一作品的相关信息，整个过程只需要3秒钟。这个精彩的游戏不仅给用户带来了每一幅作品背后的故事，也展示了蚂蚁金服在用户身份验证中所使用的惊人的人脸识别技术。</p><p>值得注意的是，“名画中的自己”是基于蚂蚁金服的人脸识别技术打造的一款娱乐产品。目前，“正经”的人脸识别技术已经应用在了支付宝账号的安全认证领域。除了密码、指纹之外，支付宝的用户已经可以通过“刷脸”登录自己的账号了。遥歌/摄</p><p align="right">(责编：赵超、杨波)</p></div>
+</div>
 </body>
 </html>
+
