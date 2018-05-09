@@ -28,7 +28,8 @@
 <script type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0	
-  document.getElementById("cvcontent").hidden = "hidden";	
+  document.getElementById("adcontent").hidden = true;
+  document.getElementById("facecontent").hidden = "hidden";	
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -92,6 +93,20 @@ function changeADImage(num) {
 		document.getElementById("ADImageSrc").src = "img/AutoDrive-1.jpeg";
 	}
 }
+function loadFACEContent(num) {
+	if (num == 0) {
+		document.getElementById("facecontent").hidden = true;
+	} else {
+		document.getElementById("facecontent").hidden = false;
+	}	
+}
+function changeFACEImage(num) {
+	if (num == 0) {
+		document.getElementById("FACEImageSrc").src = "img/face-2.png";
+	} else {
+		document.getElementById("FACEImageSrc").src = "img/face-1.jpg";
+	}
+}
 </script>
 </head>
 
@@ -123,6 +138,20 @@ function changeADImage(num) {
 <p>
 <a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank"><b><font color="#FF0B0F">自动驾驶汽车</font></b></a>，又称为无人驾驶汽车、电脑驾驶汽车或轮式移动机器人，是无人地面载具的一种，具有传统汽车的运输能力。作为自动化载具，自动驾驶汽车不需要人为操作即能感测其环境及导航。完全的自动驾驶汽车仍未全面商用化，大多数均为原型机及展示系统，部分可靠技术才下放至量产车型，但有关于自驾车逐渐成为现实，已经引起了很多有关于道德的讨论。
 </p></div>
+</td>
+</tr></table>
+</div><br />
+<div id="face" onmouseover="loadFACEContent(1)" onMouseOut="loadFACEContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="facecontent">
+<p>
+<a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank"><b><font color="#FF0B0F">自动驾驶汽车</font></b></a>，又称为无人驾驶汽车、电脑驾驶汽车或轮式移动机器人，是无人地面载具的一种，具有传统汽车的运输能力。作为自动化载具，自动驾驶汽车不需要人为操作即能感测其环境及导航。完全的自动驾驶汽车仍未全面商用化，大多数均为原型机及展示系统，部分可靠技术才下放至量产车型，但有关于自驾车逐渐成为现实，已经引起了很多有关于道德的讨论。
+</p></div>
+</td>
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeFACEImage(0)" onMouseOut="changeFACEImage(1)">
+<a href="AutoDrivenews.html"><img src="img/face-1.jpg" width="495px" height="300px" id="FACEImageSrc"/></a>
 </td>
 </tr></table>
 </div><br />
