@@ -30,6 +30,7 @@
 function MM_preloadImages() { //v3.0	
   document.getElementById("adcontent").hidden = true;
   document.getElementById("facecontent").hidden = "hidden";	
+  document.getElementById("translatecontent").hidden = "hidden";	
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -107,6 +108,20 @@ function changeFACEImage(num) {
 		document.getElementById("FACEImageSrc").src = "img/face-1.jpg";
 	}
 }
+function loadMTContent(num) {
+	if (num == 0) {
+		document.getElementById("translatecontent").hidden = true;
+	} else {
+		document.getElementById("translatecontent").hidden = false;
+	}	
+}
+function changeMTImage(num) {
+	if (num == 0) {
+		document.getElementById("MTImageSrc").src = "img/translate-2.png";
+	} else {
+		document.getElementById("MTImageSrc").src = "img/translate-1.jpeg";
+	}
+}
 </script>
 </head>
 
@@ -152,6 +167,20 @@ function changeFACEImage(num) {
 </td>
 <td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeFACEImage(0)" onMouseOut="changeFACEImage(1)">
 <a href="facenews.html"><img src="img/face-1.jpg" width="495px" height="300px" id="FACEImageSrc"/></a>
+</td>
+</tr></table>
+</div><br />
+<div id="translate" onmouseover="loadMTContent(1)" onMouseOut="loadMTContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeMTImage(0)" onMouseOut="changeMTImage(1)">
+<a href="http://kaoyan.eol.cn/nnews/201804/t20180422_1596561.shtml" target="_blank"><img src="img/translate-1.jpeg" width="495px" height="300px" id="MTImageSrc"/></a>
+</td>
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="translatecontent">
+<p>
+<a href="https://en.wikipedia.org/wiki/Machine_translation" target="_blank"><b><font color="#FF0B0F">机器翻译</font></b></a>（Machine Translation，经常简写为MT，俗称机翻）属于计算语言学的范畴，其研究借由计算机vpn女程序将文字或演说从一种自然语言翻译成另一种自然语言。简单来说，机器翻译是通过将一个自然语言的字辞取代成另一个语兔兔哦wet咯的字辞。借由使用语料库的技术，可达成更加复杂的自动翻译，包含可更佳的处理不同的文法结构、辞汇辨识、惯用语的对应等。
+</p></div>
 </td>
 </tr></table>
 </div><br />
