@@ -81,56 +81,18 @@ function MM_nbGroup(event, grpName) { //v6.0
 //-->
 </script>
 <script type="text/JavaScript">
-function loadCVContent() {
-	document.getElementById("cvcontent").hidden = false;	
-}
-function hideCVContent() {
-	document.getElementById("cvcontent").hidden = true;	
-}
-function loadImageContent() {
-	document.getElementById("Imagecontent").hidden = false;	
-}
-function hideImageContent() {
-	document.getElementById("Imagecontent").hidden = true;	
-}
-function loadIRContent() {
-	document.getElementById("ircontent").hidden = false;	
-}
-function hideIRContent() {
-	document.getElementById("ircontent").hidden = true;	
-}
-function loadNLPContent() {
-	document.getElementById("nlpcontent").hidden = false;	
-}
-function hideNLPContent() {
-	document.getElementById("nlpcontent").hidden = true;	
-}
-function changeCVImage(num) {
+function loadANNContent(num) {
 	if (num == 0) {
-		document.getElementById("CVImageSrc").src = "img/cv-2.png";
+		document.getElementById("anncontent").hidden = true;		
 	} else {
-		document.getElementById("CVImageSrc").src = "img/cv-1.jpg";
+		document.getElementById("anncontent").hidden = false;		
 	}
 }
-function changeImageRImage(num) {
+function changeANNImage(num) {
 	if (num == 0) {
-		document.getElementById("imageRSrc").src = "img/imagerecognition-2.png";
+		document.getElementById("ANNImageSrc").src = "img/ANN-2.png";
 	} else {
-		document.getElementById("imageRSrc").src = "img/imagerecognition-1.jpg";
-	}
-}
-function changeIRImage(num) {
-	if (num == 0) {
-		document.getElementById("IRImageSrc").src = "img/IR-2.png";
-	} else {
-		document.getElementById("IRImageSrc").src = "img/IR-1.jpg";
-	}
-}
-function changeNLPImage(num) {
-	if (num == 0) {
-		document.getElementById("NLPImageSrc").src = "img/nlp-2.png";
-	} else {
-		document.getElementById("NLPImageSrc").src = "img/nlp-1.jpg";
+		document.getElementById("ANNImageSrc").src = "img/ANN-1.jpeg";
 	}
 }
 </script>
@@ -155,79 +117,30 @@ function changeNLPImage(num) {
 </div><br />
 <nav aria-label="领域分类">
   <ul class="pager">
-    <li class="next"><a href="field_method.html">按研究方法划分 <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="previous"><a href="field.html"><span aria-hidden="true">&larr;</span>按具体应用划分</a></li>
   </ul>
 </nav>
 <br />
-<div id="cv" onmouseover="loadCVContent()" onMouseOut="hideCVContent()">
+<div id="ann" onmouseover="loadANNContent(1)" onMouseOut="loadANNContent(0)">
 <table  class="contents">
 <tr class="contents">
-<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeCVImage(0)" onMouseOut="changeCVImage(1)">
-<a href="cvnews.html"><img src="img/cv-1.jpg" width="495px" height="300px" id="CVImageSrc"/></a>
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeANNImage(0)" onMouseOut="changeANNImage(1)">
+<a href="https://en.wikipedia.org/wiki/Artificial_neural_network" target="_blank"><img src="img/ANN-1.jpeg" width="495px" height="300px" id="ANNImageSrc"/></a>
 </td>
 <td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
-<div id="cvcontent">
+<div id="anncontent">
 <p>
-<a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank"><b><font color="#FF0B0F">计算机视觉</font></b></a>是一门研究如何使机器“看”的科学，更进一步的说，就是指用摄影机和计算机代替人眼对目标进行识别、跟踪和测量等机器视觉，并进一步做图像处理，用计算机处理成为更适合人眼观察或传送给仪器检测的图像。
-</p>
-<p>
-作为一个工程学科，计算机视觉寻求基于相关理论与模型来创建计算机视觉系统。这类系统的组成部分包括：
+<b>参考阅读：</b>
 <ol>
-<li>过程控制（例如工业机器人和无人驾驶汽车）</li>
-<li>事件监测（例如图像监测）</li>
-<li>信息组织（例如图像数据库和图像序列的索引创建）</li>
-<li>物体与环境建模（例如工业检查，医学图像分析和拓扑建模）</li>
-<li>交感互动（例如人机互动的输入设备）</li>
+<li><a href="https://blog.csdn.net/qq_21190081/article/details/56030571" target="_blank">深度学习笔记（1）——神经网络(neural network)</a></li>
+<li><a href="https://blog.csdn.net/v_july_v/article/details/51812459" target="_blank">CNN笔记：通俗理解卷积神经网络 </a></li>
+<li><a href="https://blog.csdn.net/heyongluoyao8/article/details/48636251" target="_blank">循环神经网络(RNN, Recurrent Neural Networks)介绍</a></li>
+<li><a href="https://blog.csdn.net/wangyangzhizhou/article/details/76651116" target="_blank">LSTM神经网络</a></li>
+
 </ol>
 </p></div>
 </td>
 </tr></table>
 </div><br />
-<div id="imagerecog" onmouseover="loadImageContent()" onMouseOut="hideImageContent()">
-<table class="contents">
-<tr class="contents">
-<td width="500px" height="280px" align="left" style="text-align:left;"  class="contents">
-<div id="Imagecontent">
-<p>
-<font size="+1">
-<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB" target="_blank"><b><font color="#FF0B0F">图像识别</font></b></a>
-，是指利用计算机对图像进行处理、分析和理解，以识别各种不同模式的目标和对像的技术。一般工业使用中，采用工业相机拍摄图片，然后再利用软件根据图片灰阶差做进一步识别处理，图像识别软件国外代表的有康耐视等，国内代表的有图智能等。另外在地理学中指将遥感图像进行分类的技术。</font>
-</p></div>
-</td>
-<td width="500px" height="280px"  class="contents" valign="middle" onMouseOver="changeImageRImage(0)" onMouseOut="changeImageRImage(1)">
-<a href="imagerecognition.html"><img src="img/imagerecognition-1.jpg" width="495px" height="260px" id="imageRSrc" /></a>
-</td>
-</tr></table>
-</div>
-<div id="ir" onmouseover="loadIRContent()" onMouseOut="hideIRContent()">
-<table class="contents">
-<tr class="contents">
-<td width="500px" height="320px"  class="contents" valign="middle" onMouseOver="changeIRImage(0)" onMouseOut="changeIRImage(1)">
-<a href="irnews.html"><img src="img/IR-1.jpg" width="495px" height="300px" id="IRImageSrc"/></a>
-</td>
-<td width="500px" height="320px" align="left" style="text-align:left;"  class="contents">
-<div id="ircontent">
-<p>
-<a href="https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/831904" target="_blank"><b><font color="#FF0B0F">信息检索</font></b></a>（Information Retrieval）是用户进行信息查询和获取的主要方式，是查找信息的方法和手段。狭义的信息检索仅指信息查询（Information Search）。即用户根据需要，采用一定的方法，借助检索工具，从信息集合中找出所需要信息的查找过程。广义的信息检索是信息按一定的方式进行加工、整理、组织并存储起来，再根据信息用户特定的需要将相关信息准确的查找出来的过程。又称信息的存储于检索。一般情况下，信息检索指的就是广义的信息检索。
-</p>
-</div>
-</td>
-</tr></table>
-</div><br />
-<div id="nlp" onmouseover="loadNLPContent()" onMouseOut="hideNLPContent()">
-<table class="contents">
-<tr class="contents">
-<td width="500px" height="320px" align="left" style="text-align:left;"  class="contents">
-<div id="nlpcontent">
-<p>
-<a href="https://baike.baidu.com/item/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86" target="_blank"><b><font color="#FF0B0F">自然语言处理</font></b></a>(natural language processing)是计算机科学领域与人工智能领域中的一个重要方向。它研究能实现人与计算机之间用自然语言进行有效通信的各种理论和方法。自然语言处理是一门融语言学、计算机科学、数学于一体的科学。因此，这一领域的研究将涉及自然语言，即人们日常使用的语言，所以它与语言学的研究有着密切的联系，但又有重要的区别。自然语言处理并不是一般地研究自然语言，而在于研制能有效地实现自然语言通信的计算机系统，特别是其中的软件系统。因而它是计算机科学的一部分。
-</p>
-</div>
-</td>
-<td width="500px" height="320px"  class="contents" valign="middle" onMouseOver="changeNLPImage(0)" onMouseOut="changeNLPImage(1)">
-<a href="nlpnews.html"><img src="img/nlp-1.jpg" width="495px" height="300px" id="NLPImageSrc"/></a>
-</td>
-</tr></table>
-</div>
 </body>
 </html>
