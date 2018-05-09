@@ -29,9 +29,6 @@
 <!--
 function MM_preloadImages() { //v3.0	
   document.getElementById("cvcontent").hidden = "hidden";	
-  document.getElementById("Imagecontent").hidden = true;
-  document.getElementById("ircontent").hidden = "hidden";
-  document.getElementById("nlpcontent").hidden = "hidden";
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -81,56 +78,18 @@ function MM_nbGroup(event, grpName) { //v6.0
 //-->
 </script>
 <script type="text/JavaScript">
-function loadCVContent() {
-	document.getElementById("cvcontent").hidden = false;	
-}
-function hideCVContent() {
-	document.getElementById("cvcontent").hidden = true;	
-}
-function loadImageContent() {
-	document.getElementById("Imagecontent").hidden = false;	
-}
-function hideImageContent() {
-	document.getElementById("Imagecontent").hidden = true;	
-}
-function loadIRContent() {
-	document.getElementById("ircontent").hidden = false;	
-}
-function hideIRContent() {
-	document.getElementById("ircontent").hidden = true;	
-}
-function loadNLPContent() {
-	document.getElementById("nlpcontent").hidden = false;	
-}
-function hideNLPContent() {
-	document.getElementById("nlpcontent").hidden = true;	
-}
-function changeCVImage(num) {
+function loadADContent(num) {
 	if (num == 0) {
-		document.getElementById("CVImageSrc").src = "img/cv-2.png";
+		document.getElementById("adcontent").hidden = true;
 	} else {
-		document.getElementById("CVImageSrc").src = "img/cv-1.jpg";
-	}
+		document.getElementById("adcontent").hidden = false;
+	}	
 }
-function changeImageRImage(num) {
+function changeADImage(num) {
 	if (num == 0) {
-		document.getElementById("imageRSrc").src = "img/imagerecognition-2.png";
+		document.getElementById("ADImageSrc").src = "img/AutoDrive-2.png";
 	} else {
-		document.getElementById("imageRSrc").src = "img/imagerecognition-1.jpg";
-	}
-}
-function changeIRImage(num) {
-	if (num == 0) {
-		document.getElementById("IRImageSrc").src = "img/IR-2.png";
-	} else {
-		document.getElementById("IRImageSrc").src = "img/IR-1.jpg";
-	}
-}
-function changeNLPImage(num) {
-	if (num == 0) {
-		document.getElementById("NLPImageSrc").src = "img/nlp-2.png";
-	} else {
-		document.getElementById("NLPImageSrc").src = "img/nlp-1.jpg";
+		document.getElementById("ADImageSrc").src = "img/AutoDrive-1.jpeg";
 	}
 }
 </script>
@@ -153,6 +112,19 @@ function changeNLPImage(num) {
   </tr>
 </table>
 </div><br />
-
+<div id="ad" onmouseover="loadADContent(1)" onMouseOut="loadADContent(0)">
+<table  class="contents">
+<tr class="contents">
+<td width="500px" height="350px"  class="contents" valign="middle" onMouseOver="changeADImage(0)" onMouseOut="changeADImage(1)">
+<a href="adnews.html"><img src="img/AutoDrive-1.jpeg" width="495px" height="300px" id="ADImageSrc"/></a>
+</td>
+<td width="500px" height="350px" align="left" style="text-align:left;"  class="contents">
+<div id="adcontent">
+<p>
+<a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank"><b><font color="#FF0B0F">自动驾驶汽车</font></b></a>，又称为无人驾驶汽车、电脑驾驶汽车或轮式移动机器人，是无人地面载具的一种，具有传统汽车的运输能力。作为自动化载具，自动驾驶汽车不需要人为操作即能感测其环境及导航。完全的自动驾驶汽车仍未全面商用化，大多数均为原型机及展示系统，部分可靠技术才下放至量产车型，但有关于自驾车逐渐成为现实，已经引起了很多有关于道德的讨论。
+</p></div>
+</td>
+</tr></table>
+</div><br />
 </body>
 </html>
