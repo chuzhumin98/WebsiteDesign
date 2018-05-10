@@ -80,46 +80,16 @@ function MM_nbGroup(event, grpName) { //v6.0
 //-->
 </script>
 <script type="text/JavaScript">
-function loadADContent(num) {
+function change(num) {
 	if (num == 0) {
-		document.getElementById("adcontent").hidden = true;
-	} else {
-		document.getElementById("adcontent").hidden = false;
-	}	
-}
-function changeADImage(num) {
-	if (num == 0) {
-		document.getElementById("ADImageSrc").src = "img/AutoDrive-2.png";
-	} else {
-		document.getElementById("ADImageSrc").src = "img/AutoDrive-1.jpeg";
-	}
-}
-function loadFACEContent(num) {
-	if (num == 0) {
-		document.getElementById("facecontent").hidden = true;
-	} else {
-		document.getElementById("facecontent").hidden = false;
-	}	
-}
-function changeFACEImage(num) {
-	if (num == 0) {
-		document.getElementById("FACEImageSrc").src = "img/face-2.png";
-	} else {
-		document.getElementById("FACEImageSrc").src = "img/face-1.jpg";
-	}
-}
-function loadMTContent(num) {
-	if (num == 0) {
-		document.getElementById("translatecontent").hidden = true;
-	} else {
-		document.getElementById("translatecontent").hidden = false;
-	}	
-}
-function changeMTImage(num) {
-	if (num == 0) {
-		document.getElementById("MTImageSrc").src = "img/translate-2.png";
-	} else {
-		document.getElementById("MTImageSrc").src = "img/translate-1.jpeg";
+		document.getElementById("videoimage").src = "img/aimovie-1.jpg";
+		document.getElementById("videocontent").src = "aimovie.html";	
+	} else if (num == 1) {
+		document.getElementById("videoimage").src = "img/robotmovie-1.jpg";
+		document.getElementById("videocontent").src = "robotmovie.html";	
+	} else if (num == 2) {
+		document.getElementById("videoimage").src = "img/robotressmovie-1.jpg";
+		document.getElementById("videocontent").src = "robotressmovie.html";	
 	}
 }
 </script>
@@ -148,18 +118,27 @@ function changeMTImage(num) {
 </td>
 </tr>
 <tr class="contents">
-<td class="contents" width="800px" height="200px">
-fjeio
+<td class="contents" width="800px" height="75px">
+<table class="contents">
+<tr class="contents">
+<td class="contents">
+<button type="button" class="btn btn-primary btn-lg" onclick="change(0)">人工智能</button></td>
+<td class="contents">
+<button type="button" class="btn btn-success btn-lg" onclick="change(1)">我，机器人</button></td>
+<td class="contents">
+<button type="button" class="btn btn-info btn-lg" onclick="change(2)">　机械姬　</button></td>
+</tr>
+</table>
 </td>
 </tr>
 <tr class="contents">
 <td class="contents" width="800px" height="400px">
-<img height="400px" src="img/robotressmovie-1.jpg" />
+<img id="videoimage" height="400px" src="img/aimovie-1.jpg" />
 </td>
 </tr>
 <tr class="contents">
 <td class="contents" width="800px" height="200px">
-<iframe name="body" src="robotressmovie.html" width="100%" height="1500px" frameborder="0"></iframe>
+<iframe id="videocontent" name="body" src="aimovie.html" width="100%" height="1500px" frameborder="0"></iframe>
 </td>
 </tr>
 </table>
